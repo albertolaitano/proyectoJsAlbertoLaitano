@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>FromUy</title>
+</head>
+<body>
+    
+    <header>
+
+        <div class="menuContainer">
+            
+            <div class="titulo">
+                <h1>FromUy</h1>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="buscadorProducto" placeholder="Buscar productos...">
+
+            </div>
+
+            <div class="boton">
+                <button id="btnCarrito" class="btnCarrito"><img src="img/cart-shopping-solid.svg" alt="Carrito de compra"></button>
+            </div>
+            
+        </div>
+      
+
+    </header>
+
+    <section id="modalCarrito" class="modalCarrito"> 
+        <div><h3>Carrito de Compras</h3></div>
+        <div class="modal">
+            <ul id="listaCarrito"></ul>
+        </div>
+        <div><p>Importe Total: $ <span id="valorTotal">0.00</span></p></div>
+        <div class="boton">
+           <button id="botonLimpiar">Limpiar Carrito</button>
+           <button id="botonFinalizarCompra">Finalizar Compra</button>
+        </div>
+    </section>
+
+    <main>
+        <div id="cardsContainer"></div>
+    </main>
+    
+    
+
+    <footer>
+        <div class="menuContainer">
+            <div><p>Proyecto JavaScript</p></div>
+            <div><p>Alberto Laitano</p></div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script type="module" src="./js/app.js"></script>
+  
+
+</body>
+</html>
