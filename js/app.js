@@ -1,7 +1,7 @@
 let productos; 
 function obtenerProductos() {
     return new Promise((resolve, reject) => {
-        fetch('../JSON/productos.json')
+        fetch('./JSON/productos.json')
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Error al cargar la API, comunícate con tu administrador");
