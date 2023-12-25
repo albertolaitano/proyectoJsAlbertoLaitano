@@ -264,8 +264,11 @@ botonFinalizarCompra.addEventListener("click", function(){
             html: '<img src="img/apu-deja-simpsons.webp" alt="Apu, gracias por su compras" style="width: 300px; height: auto;">',
             title: "Gracias por su compras, vuelva prontos!",
             showConfirmButton: false,
-            timer: 3000
+            timer: 5000
         });
+        carrito = [];
+        actualizarCarrito();
+        localStorage.clear();
     }
 })
 
