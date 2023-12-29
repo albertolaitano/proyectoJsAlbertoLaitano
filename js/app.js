@@ -107,9 +107,10 @@ let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 function guardarCarritoLocalStorage(){
     localStorage.setItem("carrito", JSON.stringify(carrito));
+    localStorage.setItem('cantidadArticulosCarrito', cantidadArticulosCarrito.toString());
 }
 
-let cantidadArticulosCarrito = 0;
+let cantidadArticulosCarrito = parseInt(localStorage.getItem('cantidadArticulosCarrito')) || 0;
 function agregarAlCarrito(producto) {
     const productoExistente = carrito.find(item => item.id === producto.id);
     productoExistente ? (productoExistente.cantidad += 1) : carrito.push({ ...producto, cantidad: 1 });
@@ -179,6 +180,7 @@ function actualizarCarrito() {
     totalElemento.textContent = valorTotal.toFixed(2);  
     carrito.length === 0 ? deshabilitarBoton() : null; 
     actualizarBotonCarrito()
+    guardarCarritoLocalStorage();
 }
 
 function actualizarBotonCarrito() {
